@@ -1,0 +1,17 @@
+library(doSNOW)
+library(foreach)
+
+cl <- makeCluster(4, type="SOCK") # 4 – number of cores
+registerDoSNOW(cl) # Register back end Cores for Parallel Computing
+
+# Using your custom defined function: "myCustomFunc()" and store in 'output' variable # Example 4
+myCustomFunc <- function(i){
+  # Apply Wordfish algorithm
+  corpus <- corpus(c(unlist(preprocessed_text[i:i+1])))
+  dfm <- dfm(corpus)
+  wordfish_results <- textmodel_wordfish(input)
+  }
+
+output <- foreach(i = 1:28, .combine = "cbind") %dopar% {
+  myCustomFunc(i)
+}

@@ -1,0 +1,116 @@
+library(quanteda)
+library(ggplot2)
+require(quanteda.textmodels)
+
+# Function to read text from file
+read_text <- function(file_path) {
+  text <- readLines(file_path)
+  return(text)
+}
+
+setwd('C:/Ritoban/IIMK/Spyder Projects/Wordcloud/outtxtmthprocomb2')
+
+preprocessed_text1 <- read_text("bjp/m1_comb.txt")
+preprocessed_text2 <- read_text("bjp/m2_comb.txt")
+preprocessed_text3 <- read_text("bjp/m3_comb.txt")
+preprocessed_text4 <- read_text("bjp/m4_comb.txt")
+preprocessed_text5 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m5_comb.txt")
+preprocessed_text6 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m6_comb.txt")
+preprocessed_text7 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m7_comb.txt")
+preprocessed_text8 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m8_comb.txt")
+preprocessed_text9 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m9_comb.txt")
+preprocessed_text10 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m10_comb.txt")
+preprocessed_text11 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m11_comb.txt")
+preprocessed_text12 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m12_comb.txt")
+preprocessed_text13 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m13_comb.txt")
+preprocessed_text14 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m14_comb.txt")
+preprocessed_text15 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m15_comb.txt")
+preprocessed_text16 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m16_comb.txt")
+preprocessed_text17 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m17_comb.txt")
+preprocessed_text18 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m18_comb.txt")
+preprocessed_text19 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m19_comb.txt")
+preprocessed_text20 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m20_comb.txt")
+preprocessed_text21 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m21_comb.txt")
+preprocessed_text22 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m22_comb.txt")
+preprocessed_text23 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m23_comb.txt")
+preprocessed_text24 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m24_comb.txt")
+preprocessed_text25 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/bjp/m25_comb.txt")
+
+preprocessed_text26 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m1_comb.txt")
+preprocessed_text27 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m2_comb.txt")
+preprocessed_text28 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m3_comb.txt")
+preprocessed_text29 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m4_comb.txt")
+preprocessed_text30 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m5_comb.txt")
+preprocessed_text31 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m6_comb.txt")
+preprocessed_text32 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m7_comb.txt")
+preprocessed_text33 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m8_comb.txt")
+preprocessed_text34 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m9_comb.txt")
+preprocessed_text35 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m10_comb.txt")
+preprocessed_text36 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m11_comb.txt")
+preprocessed_text37 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m12_comb.txt")
+preprocessed_text38 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m13_comb.txt")
+preprocessed_text39 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m14_comb.txt")
+preprocessed_text40 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m15_comb.txt")
+preprocessed_text41 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m16_comb.txt")
+preprocessed_text42 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m17_comb.txt")
+preprocessed_text43 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m18_comb.txt")
+preprocessed_text44 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m19_comb.txt")
+preprocessed_text45 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m20_comb.txt")
+preprocessed_text46 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m21_comb.txt")
+preprocessed_text47 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m22_comb.txt")
+preprocessed_text48 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m23_comb.txt")
+preprocessed_text49 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m24_comb.txt")
+preprocessed_text50 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb2/combined/m25_comb.txt")
+
+
+# preprocessed_text47 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m1_comb.txt")
+# preprocessed_text48 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m2_comb.txt")
+# preprocessed_text49 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m3_comb.txt")
+# preprocessed_text50 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m4_comb.txt")
+# preprocessed_text51 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m5_comb.txt")
+# preprocessed_text52 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m6_comb.txt")
+# preprocessed_text53 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m7_comb.txt")
+# preprocessed_text54 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m8_comb.txt")
+# preprocessed_text55 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m9_comb.txt")
+# preprocessed_text56 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m10_comb.txt")
+# preprocessed_text57 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m11_comb.txt")
+# preprocessed_text58 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m12_comb.txt")
+# preprocessed_text59 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m13_comb.txt")
+# preprocessed_text60 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m14_comb.txt")
+# preprocessed_text61 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m15_comb.txt")
+# preprocessed_text62 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m16_comb.txt")
+# preprocessed_text63 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m17_comb.txt")
+# preprocessed_text64 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m18_comb.txt")
+# preprocessed_text65 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m19_comb.txt")
+# preprocessed_text66 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m20_comb.txt")
+# preprocessed_text67 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m21_comb.txt")
+# preprocessed_text68 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m22_comb.txt")
+# preprocessed_text69 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m23_comb.txt")
+# preprocessed_text70 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m24_comb.txt")
+# preprocessed_text71 <- read_text("C:/Users/JASPREET/Desktop/weekwisedata/outtxtmthprocomb/other/m25_comb.txt")
+
+corpus <- corpus(c(preprocessed_text1, preprocessed_text2, preprocessed_text3, preprocessed_text4, preprocessed_text5, preprocessed_text6,preprocessed_text7,preprocessed_text8 ,preprocessed_text9, preprocessed_text10, preprocessed_text11, preprocessed_text12, preprocessed_text13 , preprocessed_text14 , preprocessed_text15 , preprocessed_text16 ,preprocessed_text17, preprocessed_text18, preprocessed_text19, preprocessed_text20, preprocessed_text21, preprocessed_text22, preprocessed_text23, preprocessed_text24, preprocessed_text25, preprocessed_text26, preprocessed_text27, preprocessed_text28, preprocessed_text29, preprocessed_text30, preprocessed_text31, preprocessed_text32, preprocessed_text33, preprocessed_text34, preprocessed_text35, preprocessed_text36, preprocessed_text37, preprocessed_text38, preprocessed_text39, preprocessed_text40, preprocessed_text41, preprocessed_text42, preprocessed_text43,preprocessed_text44, preprocessed_text45, preprocessed_text46, preprocessed_text47, preprocessed_text48, preprocessed_text49, preprocessed_text50))#, preprocessed_text51, preprocessed_text52, preprocessed_text53, preprocessed_text54, preprocessed_text55, preprocessed_text56, preprocessed_text57, preprocessed_text58, preprocessed_text59, preprocessed_text60, preprocessed_text61, preprocessed_text62, preprocessed_text63, preprocessed_text64, preprocessed_text65, preprocessed_text66, preprocessed_text67, preprocessed_text68, preprocessed_text69, preprocessed_text70, preprocessed_text71))#,preprocessed_text21,preprocessed_text22,preprocessed_text23,preprocessed_text24,preprocessed_text25,preprocessed_text26,preprocessed_text27,preprocessed_text28,preprocessed_text29,preprocessed_text30))
+
+
+corpus <- corpus(c(preprocessed_text1, preprocessed_text2, preprocessed_text3, preprocessed_text4))
+
+#corpus <- corpus(preprocessed_text1)
+# Create a document-feature matrix
+dfm <- dfm(corpus)
+print('created dfm')
+
+# Apply Wordfish algorithm
+wordfish_results <- textmodel_wordfish(dfm)
+print('applied wf')
+
+# Get the ideological positions
+#positions <- data.frame(Article = c("BJP m1", "BJP m2","CONG m1", "CONG m2", "OTHER m1", "OTHER m2"), Position = wordfish_results$theta)
+#positions <- data.frame(Article = c("BJP m1", "BJP m2","BJP m3", "BJP m4", "BJP m5","CONG m1", "CONG m2", "CONG m3", "CONG m4", "CONG m5","OTHER m1", "OTHER m2", "OTHER m3", "OTHER m4", "OTHER m5"), Position = wordfish_results$theta)
+#positions <- data.frame(Article = c("BJP m1", "BJP m2","BJP m3", "BJP m4", "BJP m5", "BJP m6", "BJP m7", "BJP m8", "BJP m9", "BJP m10","CONG m1", "CONG m2", "CONG m3", "CONG m4", "CONG m5", "CONG m6", "CONG m7","CONG m8", "CONG m9", "CONG m10", "OTHER m1", "OTHER m2", "OTHER m3", "OTHER m4", "OTHER m5", "OTHER m6", "OTHER m7", "OTHER m8", "OTHER m9", "OTHER m10"), Position = wordfish_results$theta)
+#positions <- data.frame(Article = c("BJPArticle 11", "CONGArticle 11", "REGArticle 11","BJPArticle 12", "CONGArticle 12", "REGArticle 12","BJPArticle 13", "CONGArticle 13", "REGArticle 13","BJPArticle 14", "CONGArticle 14", "REGArticle 14","BJPArticle 15", "CONGArticle 15", "REGArticle 15","BJPArticle 16", "CONGArticle 16", "REGArticle 16","BJPArticle 17", "CONGArticle 17", "REGArticle 17","BJPArticle 18", "CONGArticle 18", "REGArticle 18","BJPArticle 19", "CONGArticle 19", "REGArticle 19","BJPArticle 20", "CONGArticle 20", "REGArticle 20"), Position = wordfish_results$theta)
+positions <- data.frame(Article = c("BJP m1", "BJP m2", "BJP m3", "BJP m4", "BJP m5", "BJP m6", "BJP m7", "BJP m8", "BJP m9", "BJP m10", "BJP m11", "BJP m12", "BJP m13", "BJP m14", "BJP m15", "BJP m16", "BJP m17", "BJP m18", "BJP m19", "BJP m20", "BJP m21", "BJP m22", "BJP m23", "BJP m24", "BJP m25","COMBINED m1", "COMBINED m2", "COMBINED m3", "COMBINED m4", "COMBINED m5", "COMBINED m6", "COMBINED m7", "COMBINED m8", "COMBINED m9", "COMBINED m10", "COMBINED m11", "COMBINED m12", "COMBINED m13", "COMBINED m14", "COMBINED m15", "COMBINED m16", "COMBINED m17", "COMBINED m18", "COMBINED m19", "COMBINED m20","COMBINED m21", "COMBINED m22", "COMBINED m23", "COMBINED m24", "COMBINED m25"), Position = wordfish_results$theta)#, "OTHER m6", "OTHER m7", "OTHER m8", "OTHER m9", "OTHER m10", "OTHER m11", "OTHER m12", "OTHER m13", "OTHER m14", "OTHER m15", "OTHER m16", "OTHER m17", "OTHER m18", "OTHER m19", "OTHER m20", "OTHER m21", "OTHER m22", "OTHER m23", "OTHER m24", "OTHER m25"), Position = wordfish_results$theta)
+
+
+# Print ideological positions
+print(positions)
+

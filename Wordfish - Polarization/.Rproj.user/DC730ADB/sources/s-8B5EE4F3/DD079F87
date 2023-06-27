@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1687358556932.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DD079F87",
+    "lastKnownWriteTime" : 1687363265,
+    "last_content_update" : 1687365459034,
+    "path" : "C:/Ritoban/IIMK/Spyder Projects/Wordcloud/Wordfish3 - Load Data.R",
+    "project_path" : "Wordfish3 - Load Data.R",
+    "properties" : {
+        "cursorPosition" : "58,37",
+        "scrollLine" : "26"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

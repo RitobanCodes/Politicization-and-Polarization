@@ -1,0 +1,4 @@
+library(stats)
+
+# Perform factor analysis in parallel
+factors <- factanal(dfm, factors = num_factors, parallel = TRUE)
